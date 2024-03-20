@@ -2,8 +2,8 @@
 
 .container-main{
   position: relative;
-  top:5vw;
-  z-index:-3;
+  top:8vw;
+  
   
 }
 .btn{
@@ -27,6 +27,23 @@
   font-weight: 800;
 }
 
+.container{
+  width:100%;
+  overflow-x: hidden;
+}
+
+.row{
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap:1rem;
+}
+
+
+.col {
+  width:100%;
+  flex: 1;
+}
 
 
 /* menubar */
@@ -35,6 +52,7 @@ header {
   overflow-x:hidden ;
   box-shadow: 2px 3px 4px rgba(0,0,0,0.4);
   position: fixed;
+  top:0;
 }
 
 header .navbar {
@@ -85,9 +103,9 @@ header .navbar {
 
 /* sidebar */
 .sidebar{
-  position: absolute;
+  position: fixed;
   background-color: #fff;
-  height: 100vh;
+  height: 100%;
   width: 0;
   opacity: 0;
   display: flex;
@@ -96,6 +114,7 @@ header .navbar {
   justify-content: flex-start;
   transition: all 0.3s;
   box-shadow: 3px 3px 2px rgba(0,0,0,0.2);
+  z-index: 999;
 }
 
 .sidebar.active{
@@ -157,32 +176,71 @@ header .navbar {
   align-items: center;
   justify-content: space-evenly;
   list-style: none;
+  gap:20px;
 }
 
-@media screen and (max-width:768px) {
-  .navbar a.logo{
-    font-size: 1.5rem;
-  }
-  .sidebar.active{
-    width:60vw;
-    opacity: 1;
-    transition: all 0.3s;
-  }
-}
-/* tab view */
-@media screen and (min-width:769px)  and (max-width:996px){
 
-  .container-main{
-    position: relative;
-    top:13vw;
-    z-index: -3;
-  }
-  .navbar a.logo{
-    font-size: 1.5rem;
-  }
-  .sidebar.active{
-    width:40vw;
-    opacity: 1;
-    transition: all 0.3s;
-  }
+.tabmenu .tab-item{
+    background-color: #222;
+    flex:1;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    border:1px solid #222;
+    
 }
+
+.tab-item .tab-link{
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+
+}
+
+/* products */
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+  grid-gap: 0.6rem;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+ 
+}
+
+.product-container .card {
+  width: 100%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  position: relative;
+}
+
+.card .card-front {
+  padding: 10px;
+  cursor: pointer;
+}
+.card .card-front .card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+}
+.card-content {
+  text-align: center;
+}
+ .card-back {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0%;
+  width: 100%;
+  background-color: #222;
+  opacity: 0;
+ }
+
+ .card:hover .card-back {
+  opacity: 1;
+  height: 15%;
+  transition: all 0.3s ease-in;
+  text-align:center;
+ }

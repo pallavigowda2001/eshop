@@ -25,7 +25,8 @@ function Home() {
     readCategory()
   },[])
   return (
-    <div className='container'>
+    <React.Fragment>
+      <div className='container'>
       <div className="row">
         <div className="col">
           <h1 className="title">Discover Our Products</h1>
@@ -48,8 +49,9 @@ function Home() {
           </ul>
         </div>
       </div>
-      <Outlet/>
     </div>
+    <Outlet/>
+    </React.Fragment>
   )
 }
 

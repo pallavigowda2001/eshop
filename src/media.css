@@ -1,0 +1,33 @@
+@media screen and (max-width:768px) {
+
+    .container-main{
+        position: relative;
+        top:20vw;
+        z-index: -3;
+    }
+    .navbar a.logo{
+      font-size: 1.5rem;
+    }
+    .sidebar.active{
+      width:60vw;
+      opacity: 1;
+      transition: all 0.3s;
+    }
+  }
+  /* tab view */
+  @media screen and (min-width:769px)  and (max-width:996px){
+  
+    .container-main{
+      position: relative;
+      top:13vw;
+      z-index: -3;
+    }
+    .navbar a.logo{
+      font-size: 1.5rem;
+    }
+    .sidebar.active{
+      width:40vw;
+      opacity: 1;
+      transition: all 0.3s;
+    }
+  }
