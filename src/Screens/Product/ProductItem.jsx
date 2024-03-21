@@ -1,12 +1,15 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 function ProductItem(props) {
   
-   let { Id, title, image, category, description, price, rating} = props
+   let { id, title, image, category, description, price, rating} = props
   
    return(
     <div className="card">
-        <div className="card-front">
+       <NavLink to= {`/product/${id}`} style={{ textDecoration: 'none'}}>
+
+       <div className="card-front">
             <img src={image?image:''} alt=""  className='card-img'/>
             <div className="card-content">
                <div className="title-sec">
@@ -18,6 +21,7 @@ function ProductItem(props) {
             </div>
             
         </div>
+       </NavLink>
 
         <div className="card-back">
             <button className='btn'>
