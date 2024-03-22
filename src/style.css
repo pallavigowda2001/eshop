@@ -256,3 +256,58 @@ header .navbar {
  .product-img {
   width:calc(100vw - 80vw)
  }
+
+
+
+ /* login */
+
+ .display-3 {
+  font-weight: 300;
+  font-size: calc(3 * 100%);
+ }
+
+ .text-center{
+  text-align: center;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+ .login .card{
+  padding: 12px;
+  border:1px solid #222;
+  width:calc(100vw - 40vw);
+  display:flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ .login .card-body{
+  padding: 10px;
+ }
+
+ .login form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:2em;
+  flex-direction: column;
+ }
+
+ .login form .form-item {
+  width:calc(100% - 20%);
+ }
+
+ .login form .form-control{
+  padding: 10px 12px;
+  font-size: 1.1em;
+ }
+
+ .login form .btn{
+  font-size: 1rem;
+ }
+
