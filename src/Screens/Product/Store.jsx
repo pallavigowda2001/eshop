@@ -11,14 +11,14 @@ function Store() {
   const [products,setProducts] = useState([])
 
   let query = useQuery()
-  console.log(`query=`, query.get('category'))
+  // console.log(`query=`, query.get('category'))
 
   //read all products
 
   const readProducts = async () => {
     await axios.get(`${url}/products`)
     .then(res => {
-      console.log(`products=`,res.data)
+      // console.log(`products=`,res.data)
       if(query.get('category')){
         let data = res.data.filter(item => item.category === query.get('category'))
       setProducts(data)
