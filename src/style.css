@@ -311,3 +311,28 @@ header .navbar {
   font-size: 1rem;
  }
 
+
+ /* cart table */
+ .table{
+  width: 100vw;
+  table-layout: auto;
+  text-align: center;
+ }
+
+ table,tr,th,td{
+  border: 1px solid #222;
+  border-collapse:collapse ;
+ }
+
+ .incr{
+  background-color: aqua;
+
+ }
+
+ .decr{
+  background-color: rgb(153, 255, 0);
+ }
+
+ .table strong{
+  font-size: 1.1rem;
+ }

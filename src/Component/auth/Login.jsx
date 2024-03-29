@@ -26,6 +26,7 @@ function Login() {
         toast.success("Login successfull")
         console.log(`res=`,res.data)
         setToken(res.data.token)
+        localStorage.setItem("token",res.data.token)
         navigate(`/`)
       }).catch (err => toast.error(err.message))
 

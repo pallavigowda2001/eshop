@@ -3,7 +3,8 @@
     .container-main{
         position: relative;
         top:20vw;
-        z-index: -3;
+        /* z-index: -3; */
+        overflow: hidden;
     }
     .navbar a.logo{
       font-size: 1.5rem;
@@ -28,7 +29,7 @@
     .container-main{
       position: relative;
       top:13vw;
-      z-index: -3;
+      /* z-index: -3; */
     }
     .navbar a.logo{
       font-size: 1.5rem;
