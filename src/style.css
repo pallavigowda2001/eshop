@@ -336,3 +336,23 @@ header .navbar {
  .table strong{
   font-size: 1.1rem;
  }
+
+ .cart {
+  position: relative;
+}
+
+.cart .circle {
+  background-color: green;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -6px;
+  right: -10px;
+}
