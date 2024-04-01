@@ -53,7 +53,8 @@ function CartProvider(props) {
         storedCart.splice(cartIndex,1)
 
         //store after delete
-        localStorage.setItem("cart" , JSON.stringify(storedCart))   
+        localStorage.setItem("cart" , JSON.stringify(storedCart))  
+        setCart(storedCart) 
         toast.success("Product deleted from cart")
         window.location.reload()
     }
@@ -99,7 +100,11 @@ function CartProvider(props) {
         if(cartItem) {
             let newCart = storedCart.map(item => {
                 if(item.id === id) {
-                    return {...item, quantity: item.quantity - 1}
+                    if(item.quantity < 1){
+                        return{...item, quantity:1}
+                    }else {
+                    return {...item, quantity:item.quantity - 1}
+                    }
                 }else {
                     return item
                 }
@@ -108,7 +113,7 @@ function CartProvider(props) {
             localStorage.setItem("cart", JSON.stringify(newCart))
             window.location.reload()
         }
-        if(cartItem.quantity < 1) {
+        if(cartItem.quantity <= 1) {
             removeCart(id)
         }
     }
